@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": "Shohanur Rahman",
+      "email": "shohanur.rahman57@gmail.com",
+      "phone": "0345345345",
+      "password": "sdfsdf",
+      "id": 1
+    },
+    {
+      "name": "John Doe",
+      "email": "john@john.com",
+      "phone": "3232342",
+      "password": "34234234",
+      "id": 2
+    }
+  ]
+}

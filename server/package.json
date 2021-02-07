@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Create Local Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "This is server for save data in local"
+  },
+  "keywords": [
+    "json",
+    "server"
+  ],
+  "author": "Shohanur Rahman",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}

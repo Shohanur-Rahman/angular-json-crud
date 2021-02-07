@@ -1,0 +1,69 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+      <div class="col-md-5">
+          <div class="card">
+              <div class="card-header">
+                  <h3>Simple Registration Form</h3>
+              </div>
+              <div class="card-body">
+                  <form #myForm="ngForm">
+                      <div class="form-group">
+                          <label for="">Name</label>
+                          <input type="text" name="name" class="form-control" [(ngModel)]="user.name" />
+                      </div>
+                      <div class="form-group">
+                          <label for="">Email</label>
+                          <input type="email" name="email" class="form-control" [(ngModel)]="user.email" />
+                      </div>
+                      <div class="form-group">
+                          <label for="">Phone</label>
+                          <input type="text" name="phone" class="form-control" [(ngModel)]="user.phone" />
+                      </div>
+                      <div class="form-group">
+                          <label for="">Password</label>
+                          <input type="password" name="password" class="form-control" [(ngModel)]="user.password" />
+                      </div>
+                      <div class="form-group">
+                          <button type="submit" class="btn btn-primary mr-1" (click)="createUser(myForm.value)" *ngIf="!isEdit">Save</button>
+                          <button type="submit" class="btn btn-success" (click)="updateUser()" *ngIf="isEdit">Update</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-7">
+          <div class="card">
+              <div class="card-header">
+                  <h3>Registerd Users</h3>
+              </div>
+              <div class="card-body">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Phone</th>
+                              <th scope="col">Password</th>
+                              <th scope="col">Action</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let user of allUsers">
+                              <td>{{user.name}}</td>
+                              <td>{{user.email}}</td>
+                              <td>{{user.phone}}</td>
+                              <td>{{user.password}}</td>
+                              <td>
+                                <button (click)="editUser(user)" class="btn btn-primary float-left">Edit</button>
+                                <button class="btn btn-danger float-right" (click)="deleteUser(user)">Delete</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
