@@ -33,7 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 4=> put demo object array and make it empty like as 
 {
 "users": []
-]
+}
 
 5=> start json server json-server --watch db.json
 6=> Browser URL http://localhost:3000/users
