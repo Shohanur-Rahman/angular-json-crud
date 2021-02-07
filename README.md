@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## How to work with npm json server
+1=> run npm i json-server in your directory via gitbash or power cmd
+2=> run npm install -g json-server
+3=> Create a db.json file with some data
+4=> put demo object array and make it empty like as 
+{
+"users": []
+]
+
+5=> start json server json-server --watch db.json
+6=> Browser URL http://localhost:3000/users
+
